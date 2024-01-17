@@ -33,10 +33,20 @@ class Post
 
     public static function find($slug)
     {
-        if (!file_exists(resource_path("posts/{$slug}.html"))) {
-            throw new ModelNotFoundException();
-        }
 
         return static::all()->where("slug", $slug)->first();
     }
+
+    public static function findOrFail($slug)
+    {
+
+        $post = static::find($slug);
+
+        if (!$post) {
+            throw new ModelNotFoundException();
+        }
+
+        return $post;
+    }
+
 }
