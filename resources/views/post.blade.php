@@ -6,17 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/app.css" />
     <title>
-        <?= $post->title ?>
+        {{ $post->title }}
     </title>
 </head>
 
 <body>
     <article>
         <h1>
-            <?= $post->title ?>
+            {{ $post->title }}
         </h1>
         <div>
-            <?= $post->body ?>
+            {!! $post->body !!}
         </div>
     </article>
     <a href="/">Back to home</a>
