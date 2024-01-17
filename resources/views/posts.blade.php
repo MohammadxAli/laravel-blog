@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="app.css" />
-    <title>Posts</title>
-</head>
-
-<body>
+<x-layout>
     @foreach ($posts as $post)
         <article>
             <h1>
@@ -23,6 +13,4 @@
             </div>
         </article>
     @endforeach
-</body>
-
-</html>
+</x-layout>
